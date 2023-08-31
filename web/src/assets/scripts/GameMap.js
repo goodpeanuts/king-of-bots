@@ -15,6 +15,7 @@ export class GameMap extends AcGameObject {
         this.rows = 13;
         this.cols = 13;
 
+        this.inner_walls_count = 20;
         this.walls = [];
     }
 
@@ -27,13 +28,28 @@ export class GameMap extends AcGameObject {
             }
         }
 
-        //四周加上围墙
+        // 四周加上围墙
         for (let r = 0; r < this.rows; r++) {
             g[r][0] = g[r][this.cols - 1] =true;
         }
 
         for (let c = 0; c < this.cols; c++) {
             g[0][c] = g[this.rows - 1][c] =true;
+        }
+
+        // 创建随机障碍物
+        for (let i = 0; i < this.inner_walls_count; i++) {
+            for (let j = 0; j < 1000; j++) {
+                let r = parseInt(Math.random() * this.rows);
+                let c = parseInt(Math.random() * this.cols);
+
+                if (g[r][c] || g[c][r]) continue;
+                if (r == this.row - 2 && c == 1 || r == 1 && c == this.cols - 2 ) 
+                    continue;
+
+                g[r][c] = g[c][r] = true;
+                break;
+            }
         }
 
 
