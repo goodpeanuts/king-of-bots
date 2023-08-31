@@ -19,6 +19,20 @@ export class GameMap extends AcGameObject {
         this.walls = [];
     }
 
+    //确保连通性
+    check_coonnectivity(g, sx, sy, tx, ty) {
+        if (sx == tx && sy == ty) return true;
+        g[sx][sy] = true;
+
+        let dx = [-1, 0, 1, 0], dy = [0, 1, 0, -1];
+        for (let i = 0; i < 4; i++) {
+            let x = sx + dx[i], y = sy + dy[i];
+            if (!g[x][y] && this.check_coonnectivity(g, x, y, tx, ty))
+            return true;
+        }
+        return false;
+    }
+    
     create_walls() {
         const g = [];
         for (let r = 0; r < this.rows; r++) {
@@ -52,6 +66,9 @@ export class GameMap extends AcGameObject {
             }
         }
 
+        const copy_g = JSON.parse(JSON.stringify(g));
+        if (!this.check_coonnectivity(copy_g, this.rows - 2, 1, 1, this.cols - 2 )) return false;
+
 
         for (let r = 0; r < this.rows; r++) {
             for (let c = 0; c < this.cols; c++) {
@@ -60,10 +77,15 @@ export class GameMap extends AcGameObject {
                 }
             }
         }
+
+        return true;
     }
 
     start() {
-        this.create_walls();
+        for (let i = 0; i < 1000; i++){
+            if (this.create_walls())
+                break;
+        }
     }
  
     update_size() {
