@@ -37,6 +37,7 @@ const routes = [
     name: "404",
     component: NotFound,
   },
+  //将不存在的网址重定向到404
   {
     path: "/:catchAll(.*)",
     redirect: "/404/"
