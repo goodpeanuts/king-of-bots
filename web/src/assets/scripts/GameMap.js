@@ -1,5 +1,5 @@
 import { AcGameObject  } from "./AcGameObject"; 
-//import { Wall } from "./Wall";
+import { Wall } from "./Wall";
 
 // export 的对象 import时需要用大括号将其括起 
 // export default 的对象则不需要，但是一个文件只能有一个default
@@ -15,15 +15,39 @@ export class GameMap extends AcGameObject {
         this.rows = 13;
         this.cols = 13;
 
-        //this.walls = [];
+        this.walls = [];
     }
 
-    //create_walls() {
-     //   new Wall(0, 0, this);
-    //}
+    create_walls() {
+        const g = [];
+        for (let r = 0; r < this.rows; r++) {
+            g[r] = [];
+            for (let c = 0; c < this.cols; c++) {
+                g[r][c] = false;
+            }
+        }
+
+        //四周加上围墙
+        for (let r = 0; r < this.rows; r++) {
+            g[r][0] = g[r][this.cols - 1] =true;
+        }
+
+        for (let c = 0; c < this.cols; c++) {
+            g[0][c] = g[this.rows - 1][c] =true;
+        }
+
+
+        for (let r = 0; r < this.rows; r++) {
+            for (let c = 0; c < this.cols; c++) {
+                if (g[r][c]) {
+                    this.walls.push(new Wall(r, c, this));
+                }
+            }
+        }
+    }
 
     start() {
-        //this.create_walls();
+        this.create_walls();
     }
  
     update_size() {
