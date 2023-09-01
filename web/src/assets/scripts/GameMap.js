@@ -1,5 +1,6 @@
 import { AcGameObject  } from "./AcGameObject"; 
 import { Wall } from "./Wall";
+import { Snake } from "./Snake";
 
 // export 的对象 import时需要用大括号将其括起 
 // export default 的对象则不需要，但是一个文件只能有一个default
@@ -17,6 +18,11 @@ export class GameMap extends AcGameObject {
 
         this.inner_walls_count = 20;
         this.walls = [];
+
+        this.snakes = [
+            new Snake({id: 0, color: "#4876EC", r: this.rows - 2, c: 1}, this),
+            new Snake({id: 1, color: "#F94848", r: 1, c: this.cols - 2}, this)
+        ]
     }
 
     //确保连通性
