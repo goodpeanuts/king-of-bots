@@ -26,14 +26,14 @@ export class GameMap extends AcGameObject {
     }
 
     //确保连通性
-    check_coonnectivity(g, sx, sy, tx, ty) {
+    check_connectivity(g, sx, sy, tx, ty) {
         if (sx == tx && sy == ty) return true;
         g[sx][sy] = true;
 
         let dx = [-1, 0, 1, 0], dy = [0, 1, 0, -1];
         for (let i = 0; i < 4; i++) {
             let x = sx + dx[i], y = sy + dy[i];
-            if (!g[x][y] && this.check_coonnectivity(g, x, y, tx, ty))
+            if (!g[x][y] && this.check_connectivity(g, x, y, tx, ty))
             return true;
         }
         return false;
@@ -73,7 +73,7 @@ export class GameMap extends AcGameObject {
         }
 
         const copy_g = JSON.parse(JSON.stringify(g));
-        if (!this.check_coonnectivity(copy_g, this.rows - 2, 1, 1, this.cols - 2 )) return false;
+        if (!this.check_connectivity(copy_g, this.rows - 2, 1, 1, this.cols - 2 )) return false;
 
 
         for (let r = 0; r < this.rows; r++) {
@@ -87,11 +87,28 @@ export class GameMap extends AcGameObject {
         return true;
     }
 
+    add_listening_events() {
+        this.ctx.canvas.focus();
+        
+        const [snake0, snake1] = this.snakes;
+        this.ctx.canvas.addEventListener("keydown", e => {
+            if (e.key === 'w') snake0.set_direction(0);
+            else if (e.key === 'd') snake0.set_direction(1);
+            else if (e.key === 's') snake0.set_direction(2);
+            else if (e.key === 'a') snake0.set_direction(3);
+            else if (e.key === 'ArrowUp') snake1.set_direction(0);
+            else if (e.key === 'ArrowRight') snake1.set_direction(1);
+            else if (e.key === 'ArrowDown') snake1.set_direction(2);
+            else if (e.key === 'ArrowLeft') snake1.set_direction(3);
+        });
+    }
+
     start() {
         for (let i = 0; i < 1000; i++){
             if (this.create_walls())
                 break;
         }
+        this.add_listening_events();
     }
  
     update_size() {
@@ -102,8 +119,25 @@ export class GameMap extends AcGameObject {
         this.ctx.canvas.height = this.L * this.rows;
     }
 
+    check_ready() { // 判断两条蛇是否都准备好
+        for (const snake of this.snakes) { 
+            if (snake.status !== "idle") return false; // 当两条蛇都不静止也就是该回合还没走完
+            if (snake.direction === -1) return false;  // 蛇还没有收到本回合指令
+        }
+        return true;
+    }
+
+    next_step() {
+        for (const snake of this.snakes) {
+            snake.next_step();
+        }
+    }
+
     update() {
         this.update_size();  
+        if (this.check_ready()) {
+            this.next_step();
+        }
         this.render();
     }
 
