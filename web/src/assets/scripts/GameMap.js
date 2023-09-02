@@ -21,8 +21,8 @@ export class GameMap extends AcGameObject {
 
         this.snakes = [
             new Snake({id: 0, color: "#4876EC", r: this.rows - 2, c: 1}, this),
-            new Snake({id: 1, color: "#F94848", r: 1, c: this.cols - 2}, this)
-        ]
+            new Snake({id: 1, color: "#F94848", r: 1, c: this.cols - 2}, this),
+        ];
     }
 
     //确保连通性
@@ -50,15 +50,15 @@ export class GameMap extends AcGameObject {
 
         // 四周加上围墙
         for (let r = 0; r < this.rows; r++) {
-            g[r][0] = g[r][this.cols - 1] =true;
+            g[r][0] = g[r][this.cols - 1] = true;
         }
 
         for (let c = 0; c < this.cols; c++) {
-            g[0][c] = g[this.rows - 1][c] =true;
+            g[0][c] = g[this.rows - 1][c] = true;
         }
 
         // 创建随机障碍物
-        for (let i = 0; i < this.inner_walls_count; i++) {
+        for (let i = 0; i < this.inner_walls_count / 2; i++) {
             for (let j = 0; j < 1000; j++) {
                 let r = parseInt(Math.random() * this.rows);
                 let c = parseInt(Math.random() * this.cols);
@@ -67,7 +67,7 @@ export class GameMap extends AcGameObject {
                 if (r == this.row - 2 && c == 1 || r == 1 && c == this.cols - 2 ) 
                     continue;
 
-                g[r][c] = g[this.rows - 1 -r][this.cols - 1 - c] = true;
+                g[r][c] = g[this.rows - 1 - r][this.cols - 1 - c] = true;
                 break;
             }
         }

@@ -10,15 +10,21 @@ export class Snake extends AcGameObject {
         this.gamemap = gamemap;
 
         this.cells = [new Cell(info.r, info.c)]; //存放蛇的身体，Cell[0]存放蛇头
+
+        this.speed = 5;
     }
 
     start() {
 
+    }    
+
+    update_move() {
+        this.cells[0].x += this.speed * this.timedelta / 1000;
     }
 
     update() {
+        this.update_move();
         this.render();
-
     }
 
     render() {
