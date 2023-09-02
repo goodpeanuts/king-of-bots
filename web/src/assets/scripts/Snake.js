@@ -49,6 +49,10 @@ export class Snake extends AcGameObject {
         for (let i = k; i > 0; i--) {
             this.cells[i] = JSON.parse(JSON.stringify(this.cells[i - 1])); // JSON字符串化实现深层复制, 直接复制是引用
         }
+
+        if (!this.gamemap.check_valid(this.next_cell)) { // 下一步撞墙，直接去世
+            this.status = "die";
+        }
     }
 
     update_move() { 
@@ -92,6 +96,10 @@ export class Snake extends AcGameObject {
         const ctx = this.gamemap.ctx;
 
         ctx.fillStyle = this.color;
+        if (this.status === "die") {
+            ctx.fillStyle = "white";
+        }
+
         for (const cell of this.cells) {
             ctx.beginPath();
             ctx.arc(cell.x * L, cell.y * L, L / 2 * 0.8, 0, Math.PI * 2);
