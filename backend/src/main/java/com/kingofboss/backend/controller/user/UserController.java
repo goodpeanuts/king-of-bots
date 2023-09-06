@@ -42,4 +42,10 @@ public class UserController {
         userMapper.insert(user);
         return "add user Successfully";
     }
+
+    @GetMapping("/user/delete/{userId}/")
+    public String deleteUser (@PathVariable int userId) {
+        userMapper.deleteById(userId);
+        return "delete User successfully";
+    }
 }
