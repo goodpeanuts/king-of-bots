@@ -24,12 +24,22 @@ public class UserController {
     }
 
     @GetMapping("/user/{userId}/")
-    public List<User> getuer(@PathVariable int userId) {
+    public User getuer(@PathVariable int userId) {
         // 复杂的查询要用到queryWrapper
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.ge("id", 2).le("id", 3);
+        queryWrapper.eq("id", userId);
 
-        return userMapper.selectList(queryWrapper);
+        return userMapper.selectOne(queryWrapper);
     }
 
+    // 插入用户信息，这里为了方便调试用get的方式
+    @GetMapping("/user/add/{userId}/{username}/{password}/")
+    public String addUser (
+            @PathVariable int userId,
+            @PathVariable String username,
+            @PathVariable String password) {
+        User user = new User(userId, username, password);
+        userMapper.insert(user);
+        return "add user Successfully";
+    }
 }
