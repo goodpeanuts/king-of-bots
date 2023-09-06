@@ -41,6 +41,9 @@ public class UserController {
             @PathVariable int userId,
             @PathVariable String username,
             @PathVariable String password) {
+        if (password.length() < 6) {
+            return "密码太短";
+        }
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encodedPassword = passwordEncoder.encode(password);
         User user = new User(userId, username, encodedPassword);
