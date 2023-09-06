@@ -1,4 +1,4 @@
-package com.kingofboss.backend.config;
+package com.kingofboss.backend.controller.config;
 
 import org.springframework.context.annotation.Configuration;
 
