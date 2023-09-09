@@ -19,11 +19,12 @@ import java.util.Map;
 public class LoginServiceImpl implements LoginService {
     // 此处按住alt + insert 自动生成实现
 
+
     @Autowired
     private AuthenticationManager authenticationManager;
 
     @Override
-    public Map<String, String> login(String username, String password) {
+    public Map<String, String> getToken(String username, String password) {
         UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(username, password);
         // 在authenticate 后输入 .var 自动生成变量名与类型
