@@ -32,7 +32,6 @@ public class LoginServiceImpl implements LoginService {
 
         UserDetailImpl loginUser = (UserDetailImpl) authenticate.getPrincipal();
         User user = loginUser.getUser();
-        // 这里getId() 与课上不同
         String jwt = JwtUtil.createJWT(user.getId().toString());
 
         Map<String, String> map = new HashMap<>();
