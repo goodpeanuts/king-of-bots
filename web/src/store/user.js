@@ -26,7 +26,7 @@ export default {
             state.username = "";
             state.photo = "";
             state.token = "";
-            state.is_login = false;
+            state.is_login = false; // 这里false别设置成字符串了 md
         }
     },
     actions: {
@@ -40,6 +40,7 @@ export default {
                 },
                 success(resp) {
                     if (resp.error_message === "success") {
+                        localStorage.setItem("jwtToken",resp.token);
                         context.commit("updateToken", resp.token);
                         data.success(resp);
                     } else {
@@ -76,6 +77,7 @@ export default {
 
         },
         logout(context) {
+            localStorage.removeItem("jwtToken");
             context.commit("logout");
         }
     },

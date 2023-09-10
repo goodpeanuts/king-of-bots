@@ -35,6 +35,19 @@ export default {
         let username = ref('');
         let password = ref('');
         let error_message = ref('');
+
+        const jwtToken = localStorage.getItem("jwtToken");
+        if (jwtToken) {
+            store.commit("updateToken", jwtToken);
+            store.dispatch("getinfo",{
+                success() {
+                    router.push({name: "home"});
+                },
+                error(){
+
+                }
+            })
+        }
         //触发函数
         const login = () => {
             error_message.value = "";
@@ -45,7 +58,6 @@ export default {
                     store.dispatch("getinfo", {
                         success() {
                             router.push({ name: 'home'});
-                            console.log(store.state.user);
                         }
                     })
                 },

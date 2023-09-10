@@ -59,7 +59,7 @@ public class RegisterServiceImpl implements RegisterService {
         }
 
         if (!password.equals(confirmPassword)) {
-            map.put("message", "两次输入密码不一致");
+            map.put("error_message", "两次输入密码不一致");
             return map;
         }
 
