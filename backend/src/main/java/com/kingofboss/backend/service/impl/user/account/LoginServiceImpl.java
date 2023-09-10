@@ -31,12 +31,12 @@ public class LoginServiceImpl implements LoginService {
         Authentication authenticate = authenticationManager.authenticate(authenticationToken); // 登录失败会自动处理
 
         UserDetailImpl loginUser = (UserDetailImpl) authenticate.getPrincipal();
-        User uer = loginUser.getUser();
+        User user = loginUser.getUser();
         // 这里getId() 与课上不同
-        String jwt = JwtUtil.createJWT(loginUser.getUser().getId().toString());
+        String jwt = JwtUtil.createJWT(user.getId().toString());
 
         Map<String, String> map = new HashMap<>();
-        map.put("error_message:" ,"success");
+        map.put("error_message" ,"success");
         map.put("token", jwt);
 
         return map;

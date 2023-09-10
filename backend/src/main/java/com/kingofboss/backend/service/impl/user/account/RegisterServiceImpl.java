@@ -30,7 +30,7 @@ public class RegisterServiceImpl implements RegisterService {
         }
 
         if (password == null || confirmPassword == null) {
-            map.put("error_messege", "密码不能为空");
+            map.put("error_message", "密码不能为空");
             return map;
         }
 
@@ -39,27 +39,27 @@ public class RegisterServiceImpl implements RegisterService {
         //password = password.trim();
 
         if(username.length() == 0) {
-            map.put("error_messege", "用户名不能为空");
+            map.put("error_message", "用户名不能为空");
             return map;
         }
 
         if (password.length() == 0 || confirmPassword.length() == 0) {
-            map.put("error_messege", "密码不能为空");
+            map.put("error_message", "密码不能为空");
             return map;
         }
 
         if (username.length() > 100) {
-            map.put("error_messege", "用户名长度不能超过100");
+            map.put("error_message", "用户名长度不能超过100");
             return map;
         }
 
         if (password.length() > 100) {
-            map.put("error_messege", "密码长度不能超过100");
+            map.put("error_message", "密码长度不能超过100");
             return map;
         }
 
         if (!password.equals(confirmPassword)) {
-            map.put("messege", "两次输入密码不一致");
+            map.put("message", "两次输入密码不一致");
             return map;
         }
 
@@ -68,7 +68,7 @@ public class RegisterServiceImpl implements RegisterService {
         queryWrapper.eq("username", username);
         List<User> users = userMapper.selectList(queryWrapper);
         if (!users.isEmpty()){
-            map.put("error_messege", "用户已存在");
+            map.put("error_message", "用户已存在");
             return map;
         }
 
@@ -79,7 +79,7 @@ public class RegisterServiceImpl implements RegisterService {
         User user = new User(null, username, encodedPassword, photo);
         userMapper.insert(user);
 
-        map.put("error_messege", "success");
+        map.put("error_message", "success");
         return map;
 
     }
