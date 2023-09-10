@@ -26,7 +26,7 @@ export default {
             state.username = "";
             state.photo = "";
             state.token = "";
-            state.is_login = "false";
+            state.is_login = false;
         }
     },
     actions: {
