@@ -45,11 +45,11 @@ export default {
                     store.commit("updatePullingInfo", false);
                 },
                 error(){
-                    store.commit("updatePullingInfo", true);
+                    store.commit("updatePullingInfo", false);
                 }
             })
         } else {
-            store.commit("updatePullingInfo", true);
+            store.commit("updatePullingInfo", false);
         }
         //触发函数
         const login = () => {
