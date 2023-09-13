@@ -1,11 +1,13 @@
 <template>
         <PlayGround v-if= "$store.state.pk.status === 'playing'"/>
         <MatchGround v-if="$store.state.pk.status === 'matching'"/>
+        <ResultBoard v-if="$store.state.pk.loser != 'none'" />
 </template>
 
 <script>
-import PlayGround from  '../../components/PlayGround.vue'
-import MatchGround from '../../components/MatchGround.vue'
+import PlayGround from  '@/components/PlayGround.vue'
+import MatchGround from '@/components/MatchGround.vue'
+import ResultBoard from '@/components/ResultBoard.vue';
 import { onMounted, onUnmounted } from 'vue';
 import { useStore } from 'vuex'
 
@@ -13,6 +15,7 @@ export default {
     components: {
         PlayGround,
         MatchGround,
+        ResultBoard,
     },
     setup() {
         const store =  useStore();
@@ -51,7 +54,7 @@ export default {
                     const [snake0, snake1] = game.snakes;
                     snake0.set_direction(data.a_direction);
                     snake1.set_direction(data.b_direction);
-                }else if (data.event === "result") {
+                } else if (data.event === "result") {
                     console.log(data);
                     const game = store.state.pk.gameObject;
                     const [snake0, snake1] = game.snakes;

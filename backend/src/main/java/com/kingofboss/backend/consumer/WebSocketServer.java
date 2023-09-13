@@ -3,6 +3,7 @@ package com.kingofboss.backend.consumer;
 import com.alibaba.fastjson2.JSONObject;
 import com.kingofboss.backend.consumer.utils.Game;
 import com.kingofboss.backend.consumer.utils.JwtAuthentication;
+import com.kingofboss.backend.mapper.RecordMappper;
 import com.kingofboss.backend.mapper.UserMapper;
 import com.kingofboss.backend.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,11 +31,17 @@ public class WebSocketServer {
     // websocker 不是标准的 springboot组件，需要先定义一个static变量注入
     // 不是单例， 因为每建立一个链接都会建立一个实例
     private static UserMapper userMapper;
+    public static RecordMappper recordMappper;
     private Game game = null;
 
     @Autowired
     public void setUserMapper(UserMapper userMapper) {
         WebSocketServer.userMapper = userMapper;
+    }
+
+    @Autowired
+    public void setRecordMapper(RecordMappper recordMapper) {
+        WebSocketServer.recordMappper = recordMapper;
     }
 
 
@@ -78,7 +85,6 @@ public class WebSocketServer {
             game.createMap();
             users.get(a.getId()).game = game;
             users.get(b.getId()).game = game;
-
 
             game.start();   // game中重载的 run 函数， 用于开启新线程
 
@@ -138,8 +144,6 @@ public class WebSocketServer {
         } else if ("move".equals(event)) {
             move(data.getInteger("direction"));
         }
-
-
     }
 
     @OnError

@@ -67,9 +67,6 @@ export class Snake extends AcGameObject {
             this.cells[i] = JSON.parse(JSON.stringify(this.cells[i - 1])); // JSON字符串化实现深层复制, 直接复制是引用
         }
 
-        if (!this.gamemap.check_valid(this.next_cell)) { // 下一步撞墙，直接去世
-            this.status = "die";
-        }
     }
 
     update_move() { 
