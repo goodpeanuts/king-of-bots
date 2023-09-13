@@ -22,6 +22,9 @@ export default {
 
     updateStatus (state, status) {
         state.status = status; 
+    },
+    updateGamemap(state, gamemap) {
+        state.gamemap = gamemap;
     }
   },
   actions: {
