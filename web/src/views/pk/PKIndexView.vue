@@ -1,15 +1,18 @@
 <template>
-        <PlayGround />
+        <PlayGround v-if= "$store.state.pk.status === 'playing'"/>
+        <MatchGround v-if="$store.state.pk.status === 'matching'"/>
 </template>
 
 <script>
 import PlayGround from  '../../components/PlayGround.vue'
+import MatchGround from '../../components/MatchGround.vue'
 import { onMounted, onUnmounted } from 'vue';
 import { useStore } from 'vuex'
 
 export default {
     components: {
-        PlayGround
+        PlayGround,
+        MatchGround,
     },
     setup() {
         const store =  useStore();
@@ -17,6 +20,13 @@ export default {
 
         let socket = null;
         onMounted(() => {
+            
+            store.commit("updateOpponent", {
+                username: "我的对手",
+                photo: "https://cdn.acwing.com/media/article/image/2022/08/09/1_1db2488f17-anonymous.png",
+            })
+
+
             socket = new WebSocket(socketUrl);
 
             socket.onopen = () => {
