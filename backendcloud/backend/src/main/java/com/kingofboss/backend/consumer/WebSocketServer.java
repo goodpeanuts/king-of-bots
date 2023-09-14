@@ -80,7 +80,7 @@ public class WebSocketServer {
         }
     }
 
-    private void startGame(Integer aId, Integer bId) {
+    public static void startGame(Integer aId, Integer bId) {
         User a = userMapper.selectById(aId), b = userMapper.selectById(bId);
         Game game = new Game(13, 14, 20, a.getId(), b.getId());
         game.createMap();
