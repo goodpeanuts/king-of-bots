@@ -84,8 +84,10 @@ public class WebSocketServer {
         User a = userMapper.selectById(aId), b = userMapper.selectById(bId);
         Game game = new Game(13, 14, 20, a.getId(), b.getId());
         game.createMap();
-        users.get(a.getId()).game = game;
-        users.get(b.getId()).game = game;
+        if (users.get(a.getId()) != null)
+            users.get(a.getId()).game = game;
+        if (users.get(b.getId()) != null)
+            users.get(b.getId()).game = game;
 
         game.start();   // game中重载的 run 函数， 用于开启新线程
 
@@ -104,14 +106,16 @@ public class WebSocketServer {
         respA.put("opponent_username", b.getUsername());
         respA.put("opponent_photo", b.getPhoto());
         respA.put("game", respGame);
-        users.get(a.getId()).sendMessage(respA.toJSONString());
+        if (users.get(a.getId()) != null)
+            users.get(a.getId()).sendMessage(respA.toJSONString());
 
         JSONObject respB = new JSONObject();
         respB.put("event", "start-matching");
         respB.put("opponent_username", a.getUsername());
         respB.put("opponent_photo", a.getPhoto());
         respB.put("game", respGame);
-        users.get(b.getId()).sendMessage(respB.toJSONString());
+        if (users.get(b.getId()) != null)
+            users.get(b.getId()).sendMessage(respB.toJSONString());
     }
 
     private void startMatching() {
