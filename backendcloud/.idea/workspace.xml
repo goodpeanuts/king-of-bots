@@ -5,67 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e18db4b0-6392-4f97-bfe2-716a5cc1c82c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/botrunningsystem/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/BotRunningSystemApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/controller/BotRunningController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/service/BotRunningService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/service/impl/BotRunningServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/controller/pk/ReceiveBotMoveController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/pk/ReceiveBotServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/pk/ReceiveBotService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/service/impl/utils/Bot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/service/impl/utils/BotPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/service/impl/utils/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/utils/Bot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/utils/BotInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/BackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/config/RestTemplateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/config/WebSocketConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/config/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/config/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/consumer/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/consumer/WebSocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/consumer/utils/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/consumer/utils/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/consumer/utils/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/consumer/utils/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/consumer/utils/JwtAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/consumer/utils/JwtAuthentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/consumer/utils/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/consumer/utils/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/bot/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/controller/bot/AddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/bot/GerListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/controller/bot/GerListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/bot/RemoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/controller/bot/RemoveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/bot/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/controller/bot/UpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/pk/StartGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/controller/pk/StartGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/user/account/InfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/controller/user/account/InfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/user/account/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/controller/user/account/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/user/account/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/controller/user/account/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/mapper/Botmapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/mapper/Botmapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/mapper/RecordMappper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/mapper/RecordMappper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/pojo/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/pojo/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/pojo/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/pojo/Record.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/UserDetailImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/UserDetailImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/UserDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/UserDetailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/pk/StartGameServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/pk/StartGameServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/InfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/user/account/InfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/user/account/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/user/account/RegisterServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/bot/AddServicImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/user/bot/AddServicImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/bot/GetListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/user/bot/GetListServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/bot/RemoveServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/user/bot/RemoveServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/bot/UpdateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/user/bot/UpdateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/pk/StartGameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/pk/StartGameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/account/InfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/user/account/InfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/account/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/user/account/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/account/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/user/account/RegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/bot/AddService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/user/bot/AddService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/bot/GetListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/user/bot/GetListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/bot/RemoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/user/bot/RemoveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/bot/UpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/user/bot/UpdateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/utils/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/kingofboss/backend/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/kingofboss/botrunningsystem/BackendApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/controller/MatchingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/controller/MatchingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/service/MatchingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/service/MatchingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/service/impl/MatchingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/service/impl/MatchingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/service/impl/utils/MatchingPool/MatchingPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/service/impl/utils/MatchingPool/MatchingPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/service/impl/utils/MatchingPool/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/service/impl/utils/MatchingPool/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/consumer/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/consumer/WebSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/BotRunningSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/BotRunningSystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/service/impl/BotRunningServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/service/impl/BotRunningServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/MatchGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/MatchGround.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/pk/PKIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/pk/PKIndexView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,37 +57,37 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "corretto-1.8",
-    "last_opened_file_path": "D:/repo/KingOfBots/backendcloud/botrunningsystem/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "D:/repo/KingOfBots/backendcloud/botrunningsystem/src/main/java/com/kingofboss/backend/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "51b252e36e25da6f2cabc3a7ef3aaba9",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/repo/KingOfBots/backendcloud/botrunningsystem/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/repo/KingOfBots/backendcloud/botrunningsystem/src/main/java/com/kingofboss/backend/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;51b252e36e25da6f2cabc3a7ef3aaba9&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\repo\KingOfBots\backendcloud\botrunningsystem\src\main\resources" />
@@ -152,20 +106,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MatchingSystemApplication">
-    <configuration name="MatchingSystemApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kingofboss.matchingsystem.MatchingSystemApplication" />
-      <module name="matchingsystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kingofboss.matchingsystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kingofboss.botrunningsystem.BackendApplication" />
@@ -180,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BotRunningSystemApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="BotRunningSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="botrunningsystem" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kingofboss.botrunningsystem.BotRunningSystemApplication" />
       <extension name="coverage">
@@ -189,13 +130,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BotRunningSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="matchingsystem" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kingofboss.backend.BotRunningSystemApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -215,9 +149,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.BotRunningSystemApplication" />
         <item itemvalue="Spring Boot.MatchingSystemApplication" />
-        <item itemvalue="Spring Boot.BotRunningSystemApplication (1)" />
-        <item itemvalue="Application.MatchingSystemApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +166,7 @@
       <workItem from="1694677641818" duration="1045000" />
       <workItem from="1694688180832" duration="678000" />
       <workItem from="1694688867611" duration="1598000" />
-      <workItem from="1694690476302" duration="3848000" />
+      <workItem from="1694690476302" duration="12255000" />
     </task>
     <servers />
   </component>

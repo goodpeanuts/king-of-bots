@@ -20,6 +20,7 @@ export default {
     setup() {
         const store =  useStore();
         const socketUrl = `ws://127.0.0.1:3000/websocket/${store.state.user.token}/`;
+        store.commit("updateLoser", "none");    // 比赛结束后切换页面切回pk页面是， result页面自动关闭
 
         let socket = null;
         onMounted(() => {
