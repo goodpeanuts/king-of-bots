@@ -31,7 +31,7 @@ public class WebSocketServer {
 
     // websocker 不是标准的 springboot组件，需要先定义一个static变量注入
     // 不是单例， 因为每建立一个链接都会建立一个实例
-    private static UserMapper userMapper;
+    public static UserMapper userMapper;
     public static RecordMappper recordMappper;
     public static Botmapper botmapper;
     public static RestTemplate restTemplate;
