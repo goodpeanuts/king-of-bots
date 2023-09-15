@@ -1,7 +1,13 @@
-<template>
+<template>  
         <PlayGround v-if= "$store.state.pk.status === 'playing'"/>
         <MatchGround v-if="$store.state.pk.status === 'matching'"/>
-        <ResultBoard v-if="$store.state.pk.loser != 'none'" />
+        <ResultBoard v-if="$store.state.pk.loser != 'none'" />  
+        <div class="user-color-blue" v-if="$store.state.pk.status === 'playing' && parseInt($store.state.user.id) === parseInt($store.state.pk.a_id)">
+            蓝方
+        </div>
+        <div class="user-color-red" v-if="$store.state.pk.status === 'playing' && parseInt($store.state.user.id) === parseInt($store.state.pk.b_id)">
+            红方
+        </div> 
 </template>
 
 <script>
@@ -85,4 +91,16 @@ export default {
 </script>
  
 <style scoped>
+div.user-color-red {
+    text-align: center;
+    color: lightcoral;
+    font-size: 30px;
+    font-weight: 600;
+}
+div.user-color-blue {
+    text-align: center;
+    color: lightskyblue;
+    font-size: 30px;
+    font-weight: 600;
+}
 </style>

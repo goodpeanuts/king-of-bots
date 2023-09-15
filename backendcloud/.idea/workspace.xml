@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e18db4b0-6392-4f97-bfe2-716a5cc1c82c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/ranklist/GetRankListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/ranklist/GetRankListServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/assets/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/PlayGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/PlayGround.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/pk/PKIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/pk/PKIndexView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +163,7 @@
       <workItem from="1694690476302" duration="12255000" />
       <workItem from="1694740363846" duration="1989000" />
       <workItem from="1694745369399" duration="162000" />
-      <workItem from="1694753769024" duration="10226000" />
+      <workItem from="1694753769024" duration="11285000" />
     </task>
     <servers />
   </component>
