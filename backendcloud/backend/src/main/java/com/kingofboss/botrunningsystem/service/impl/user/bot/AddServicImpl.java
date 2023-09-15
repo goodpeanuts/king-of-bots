@@ -1,5 +1,6 @@
 package com.kingofboss.botrunningsystem.service.impl.user.bot;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kingofboss.botrunningsystem.mapper.Botmapper;
 import com.kingofboss.botrunningsystem.pojo.Bot;
 import com.kingofboss.botrunningsystem.pojo.User;
@@ -57,6 +58,13 @@ public class AddServicImpl implements AddService {
 
         if (content.length() > 10240) {
             map.put("error_message", "代码长度不能超过10240");
+            return map;
+        }
+
+        QueryWrapper<Bot> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_id", user.getId());
+        if (botmapper.selectCount(queryWrapper) >= 10) {
+            map.put("error_message", "每个用户最多只能创建10个Bot！");
             return map;
         }
 
