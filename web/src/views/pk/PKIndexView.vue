@@ -21,7 +21,8 @@ export default {
         const store =  useStore();
         const socketUrl = `ws://127.0.0.1:3000/websocket/${store.state.user.token}/`;
         store.commit("updateLoser", "none");    // 比赛结束后切换页面切回pk页面是， result页面自动关闭
-
+        store.commit("updateIsRecord", false);
+        
         let socket = null;
         onMounted(() => {
 
@@ -48,7 +49,7 @@ export default {
                     setTimeout(() => {
                         store.commit("updateStatus", "playing");
                     }, 200);
-                    store.commit("updateGamemap", data.game);
+                    store.commit("updateGame", data.game);
                 } else if (data.event === "move") {
                     console.log(data);
                     const game = store.state.pk.gameObject;
