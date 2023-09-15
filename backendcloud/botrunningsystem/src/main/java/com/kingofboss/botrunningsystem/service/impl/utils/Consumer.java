@@ -1,6 +1,6 @@
 package com.kingofboss.botrunningsystem.service.impl.utils;
 
-import com.kingofboss.botrunningsystem.utils.BotInterface;
+
 import org.joor.Reflect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -8,7 +8,11 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.UUID;
+import java.util.function.Supplier;
 
 @Component
 public class Consumer extends Thread {
@@ -36,7 +40,7 @@ public class Consumer extends Thread {
     }
 
     private String addUid(String code, String uid) {  // 在code中的Bot类名后添加uid
-        int k = code.indexOf(" implements com.kingofboss.botrunningsystem.utils.BotInterface");
+        int k = code.indexOf(" implements java.util.function.Supplier<Integer>");
         return code.substring(0, k) + uid + code.substring(k);
     }
 
@@ -46,12 +50,20 @@ public class Consumer extends Thread {
         UUID uuid = UUID.randomUUID();  // 由于 reflect 相同类名只编译一次， 需要随机地田间不同的名字
         String uid = uuid.toString().substring(0, 8);
 
-        BotInterface botInterface = Reflect.compile(    // 这里能够动态地编译获取的java代码
+        Supplier<Integer> botInterface = Reflect.compile(    // 这里能够动态地编译获取的java代码
                 "com.kingofboss.botrunningsystem.utils.Bot" + uid,
                 addUid(bot.getBotCode(), uid)
         ).create().get();
 
-        Integer direction = botInterface.nextMove(bot.getInput());
+        File file = new File("input.txt");
+        try (PrintWriter fout = new PrintWriter(file)) {
+            fout.println(bot.getInput());
+            fout.flush();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        Integer direction = botInterface.get();
         System.out.println("move-direction: " + bot.getUserId() + " " + direction);
 
         MultiValueMap<String, String> data = new LinkedMultiValueMap<>();
