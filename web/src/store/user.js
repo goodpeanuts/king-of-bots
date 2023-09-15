@@ -56,16 +56,16 @@ export default {
                 }
               });
         },
-        getinfo(contex, data) {
+        getinfo(context, data) {
             $.ajax({
                 url: "http://127.0.0.1:3000/user/account/info/",
                 type: "get",
                 headers: {
-                    Authorization: "Bearer " + contex.state.token,
+                    Authorization: "Bearer " + context.state.token,
                 },
                 success(resp) {
                     if (resp.error_message === "success") {
-                        contex.commit("updateUser", {
+                        context.commit("updateUser", {
                             ...resp,
                             is_login: true,
                         });
