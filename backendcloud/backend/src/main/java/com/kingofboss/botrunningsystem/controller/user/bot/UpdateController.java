@@ -1,4 +1,4 @@
-package com.kingofboss.botrunningsystem.controller.bot;
+package com.kingofboss.botrunningsystem.controller.user.bot;
 
 import com.kingofboss.botrunningsystem.service.user.bot.UpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ public class UpdateController {
     @Autowired
     private UpdateService updateService;
 
-    @PostMapping("/user/bot/update/")
+    @PostMapping("/api/user/bot/update/")
     public Map<String, String> update(@RequestParam Map<String, String> data) {
         return updateService.update(data);
     }

@@ -1,4 +1,4 @@
-package com.kingofboss.botrunningsystem.controller.bot;
+package com.kingofboss.botrunningsystem.controller.user.bot;
 
 import com.kingofboss.botrunningsystem.service.user.bot.AddService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ public class AddController {
     @Autowired
     private AddService addService;
 
-    @PostMapping("/user/bot/add/")
+    @PostMapping("/api/user/bot/add/")
     public Map<String, String> add(@RequestParam Map<String, String> data) {
         return addService.add(data);
     }

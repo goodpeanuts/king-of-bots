@@ -1,4 +1,4 @@
-package com.kingofboss.botrunningsystem.controller.bot;
+package com.kingofboss.botrunningsystem.controller.user.bot;
 
 import com.kingofboss.botrunningsystem.pojo.Bot;
 import com.kingofboss.botrunningsystem.service.user.bot.GetListService;
@@ -13,7 +13,7 @@ public class GerListController {
     @Autowired
     private GetListService getListService;
 
-    @GetMapping("/user/bot/getlist/")
+    @GetMapping("/api/user/bot/getlist/")
     public List<Bot> getList(){
         return getListService.getList();
     }
