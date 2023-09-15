@@ -62,9 +62,31 @@ export default {
         let records = ref([]);
         let current_page = 1;
         let total_records = 0;
-        // let pages = ref([]);
+        let pages = ref([]);
 
-        console.log(total_records);
+        const click_page = page => {
+            if (page === -2) page = current_page - 1;
+            else if (page === -1) page = current_page + 1;
+            let max_pages = parseInt(Math.ceil(total_records / 10));
+
+            if (page >= 1 && page <= max_pages) {
+                pull_page(page);
+            }
+        }
+
+        const udpate_pages = () => {
+            let max_pages = parseInt(Math.ceil(total_records / 10));
+            let new_pages = [];
+            for (let i = current_page - 2; i <= current_page + 2; i ++ ) {
+                if (i >= 1 && i <= max_pages) {
+                    new_pages.push({
+                        number: i,
+                        is_active: i === current_page ? "active" : "",
+                    });
+                }
+            }
+            pages.value = new_pages;
+        }
 
         const pull_page = page => {
             current_page = page;
@@ -80,7 +102,7 @@ export default {
                 success(resp) {
                     records.value = resp.records;
                     total_records = resp.records_count;
-                    // udpate_pages();
+                    udpate_pages();
                 },
                 error(resp) {
                     console.log(resp);
@@ -136,8 +158,8 @@ export default {
         return {
             records,
             open_record_content,
-            // pages,
-            // click_page
+            pages,
+            click_page
         }
 
 

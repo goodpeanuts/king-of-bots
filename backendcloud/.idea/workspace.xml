@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e18db4b0-6392-4f97-bfe2-716a5cc1c82c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/controller/ranklist/GetRanklistController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/impl/ranklist/GetRankListServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/botrunningsystem/service/ranklist/GetRankListService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/record/RecordIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/record/RecordIndexView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +36,9 @@
         <option name="mavenHome" value="Use Maven wrapper" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -158,7 +162,7 @@
       <workItem from="1694690476302" duration="12255000" />
       <workItem from="1694740363846" duration="1989000" />
       <workItem from="1694745369399" duration="162000" />
-      <workItem from="1694753769024" duration="4066000" />
+      <workItem from="1694753769024" duration="5647000" />
     </task>
     <servers />
   </component>
