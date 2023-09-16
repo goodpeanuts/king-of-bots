@@ -23,13 +23,13 @@
                         <span class="record-user-username">{{ record.b_username }}</span>
                     </td>
                     <td style="color: rgb(9, 100, 235)" v-if="record.result == '蓝' ">
-                        {{ record.result }}
+                        {{ record.a_username }}
                     </td>
                     <td style="color: rgb(237, 33, 18)" v-else-if="record.result == '红' ">
-                        {{ record.result }}
+                        {{ record.b_username  }}
                     </td>
                     <td  style="font-weight: bold;" v-else-if="record.result == '平' ">
-                        {{ record.result }}
+                        平局
                     </td>
                     <td>{{ record.record.createtime }}</td>
                     <td>
