@@ -3,26 +3,34 @@
         <table class="table table-striped table-hover" style="text-align: center;">
             <thead>
                 <tr>
-                    <th>A</th>
-                    <th>B</th>
-                    <th>对战结果</th>
+                    <th>蓝方</th>
+                    <th>红方</th>
+                    <th>胜方</th>
                     <th>对战时间</th>
                     <th>操作</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="record in records" :key="record.record.id">
-                    <td>
+                    <td style="color: rgb(60, 130, 235);">
                         <img :src="record.a_photo" alt="" class="record-user-photo">
                         &nbsp;
                         <span class="record-user-username">{{ record.a_username }}</span>
                     </td>
-                    <td>
+                    <td style="color:rgb(226, 75, 64)">
                         <img :src="record.b_photo" alt="" class="record-user-photo">
                         &nbsp;
                         <span class="record-user-username">{{ record.b_username }}</span>
                     </td>
-                    <td>{{ record.result }}</td>
+                    <td style="color: rgb(9, 100, 235)" v-if="record.result == '蓝' ">
+                        {{ record.result }}
+                    </td>
+                    <td style="color: rgb(237, 33, 18)" v-else-if="record.result == '红' ">
+                        {{ record.result }}
+                    </td>
+                    <td  style="font-weight: bold;" v-else-if="record.result == '平' ">
+                        {{ record.result }}
+                    </td>
                     <td>{{ record.record.createtime }}</td>
                     <td>
                         <button @click="open_record_content(record.record.id)" type="button" class="btn btn-secondary">查看录像</button>
@@ -172,4 +180,12 @@ img.record-user-photo {
     width: 4vh;
     border-radius: 50%;
 }
+.blue-text {
+    color: blue;
+}
+
+.red-text {
+    color: red;
+}
+
 </style>

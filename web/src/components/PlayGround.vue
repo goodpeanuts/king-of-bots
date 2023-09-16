@@ -1,5 +1,11 @@
 <template>
-    <div class="playground">
+    <div class="playground-blue" v-if="$store.state.pk.status === 'playing' && parseInt($store.state.user.id) === parseInt($store.state.pk.a_id)">
+        <GameMap />
+    </div>
+    <div class="playground-red" v-else-if="$store.state.pk.status === 'playing' && parseInt($store.state.user.id) === parseInt($store.state.pk.b_id)">
+        <GameMap />
+    </div> 
+    <div class="playground-green" v-else>
         <GameMap />
     </div>
 </template>
@@ -15,10 +21,23 @@ export default {
 </script>
 
 <style scoped>
-div.playground {
-    width: 60vw;
-    height: 70vh;
-    background: lightblue;
-    margin: 40px auto;
+div.playground-blue {
+    height: 73vh;
+    background: rgb(60, 130, 235);
+    margin: 70px auto;
+    aspect-ratio: 14 / 13; /* 设置容器的宽高比为1:1，使其保持正方形 */
 }
+div.playground-red {
+    height: 73vh;
+    background: rgb(226, 75, 64);
+    margin: 70px auto;
+    aspect-ratio: 14 / 13; /* 设置容器的宽高比为1:1，使其保持正方形 */
+}
+div.playground-green {
+    height: 73vh;
+    background: rgb(95, 201, 132);
+    margin: 70px auto;
+    aspect-ratio: 14 / 13; /* 设置容器的宽高比为1:1，使其保持正方形 */
+}
+
 </style> 
