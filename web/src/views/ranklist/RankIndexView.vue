@@ -4,7 +4,7 @@
             <thead>
                 <tr>
                     <th>玩家</th>
-                    <th>天梯分</th>
+                    <th>原石</th>
                 </tr>
             </thead>
             <tbody>

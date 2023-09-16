@@ -1,6 +1,6 @@
 package com.kingofboss.backend.service.ranklist;
 
-import com.alibaba.fastjson2.JSONObject;
+import com.alibaba.fastjson.JSONObject;
 
 public interface GetRankListService {
     JSONObject getList(Integer page);

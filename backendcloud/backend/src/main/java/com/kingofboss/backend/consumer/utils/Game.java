@@ -1,6 +1,6 @@
 package com.kingofboss.backend.consumer.utils;
 
-import com.alibaba.fastjson2.JSONObject;
+import com.alibaba.fastjson.JSONObject;
 import com.kingofboss.backend.consumer.WebSocketServer;
 import com.kingofboss.backend.pojo.Bot;
 import com.kingofboss.backend.pojo.Record;
@@ -317,7 +317,7 @@ public class Game extends Thread {
                 new Date()
         );
 
-        WebSocketServer.recordMappper.insert(record);
+        WebSocketServer.recordMapper.insert(record);
     }
 
 

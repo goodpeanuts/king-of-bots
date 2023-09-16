@@ -1,6 +1,6 @@
 package com.kingofboss.backend.controller.ranklist;
 
-import com.alibaba.fastjson2.JSONObject;
+import com.alibaba.fastjson.JSONObject;
 import com.kingofboss.backend.service.ranklist.GetRankListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
