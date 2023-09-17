@@ -78,7 +78,7 @@ export default {
         const pull_page = page => {
             current_page = page;
             $.ajax({
-                url: "http://127.0.0.1:3000/ranklist/getlist/",
+                url: "https://app5749.acapp.acwing.com.cn/api/ranklist/getlist/",
                 data: {
                     page,
                 },

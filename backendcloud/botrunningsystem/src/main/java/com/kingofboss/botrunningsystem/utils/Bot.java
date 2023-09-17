@@ -43,7 +43,7 @@ public class Bot implements java.util.function.Supplier<Integer> {
 
     public Integer nextMove(String input) {
         String[] strs = input.split("#");
-        int[][] g = new int[13][14];
+        int[][] g = new int[13][14];    // 将字符串还原为二维地图
         for (int i = 0, k = 0; i < 13; i ++ ) {
             for (int j = 0; j < 14; j ++, k ++ ) {
                 if (strs[0].charAt(k) == '1') {
@@ -52,18 +52,18 @@ public class Bot implements java.util.function.Supplier<Integer> {
             }
         }
 
-        int aSx = Integer.parseInt(strs[1]), aSy = Integer.parseInt(strs[2]);
-        int bSx = Integer.parseInt(strs[4]), bSy = Integer.parseInt(strs[5]);
+        int aSx = Integer.parseInt(strs[1]), aSy = Integer.parseInt(strs[2]);   // 我方起点
+        int bSx = Integer.parseInt(strs[4]), bSy = Integer.parseInt(strs[5]);   // 对方起点
 
-        List<Cell> aCells = getCells(aSx, aSy, strs[3]);
-        List<Cell> bCells = getCells(bSx, bSy, strs[6]);
+        List<Cell> aCells = getCells(aSx, aSy, strs[3]);                        // 获取我方身体位置
+        List<Cell> bCells = getCells(bSx, bSy, strs[6]);                        // 获取对方身体位置
 
-        for (Cell c: aCells) g[c.x][c.y] = 1;
+        for (Cell c: aCells) g[c.x][c.y] = 1;                                   // 将被占位置置 1
         for (Cell c: bCells) g[c.x][c.y] = 1;
 
         int[] dx = {-1, 0, 1, 0}, dy = {0, 1, 0, -1};
-        for (int i = 0; i < 4; i ++ ) {
-            int x = aCells.get(aCells.size() - 1).x + dx[i];
+        for (int i = 0; i < 4; i ++ ) {                                         // 简单判断哪个方向能走
+            int x = aCells.get(aCells.size() - 1).x + dx[i];                    // 0上 ， 1左， 3下。 4又
             int y = aCells.get(aCells.size() - 1).y + dy[i];
             if (x >= 0 && x < 13 && y >= 0 && y < 14 && g[x][y] == 0) {
                 return i;
