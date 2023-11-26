@@ -36,7 +36,7 @@ export default {
     actions: {
         login(context, data) {
             $.ajax({
-                url: "https://app5749.acapp.acwing.com.cn/api/user/account/token/",
+                url: "http://192.168.13.143/api/user/account/token/",
                 type: "post",
                 data: {
                   username: data.username,
@@ -58,7 +58,7 @@ export default {
         },
         getinfo(context, data) {
             $.ajax({
-                url: "https://app5749.acapp.acwing.com.cn/api/user/account/info/",
+                url: "http://192.168.13.143/api/user/account/info/",
                 type: "get",
                 headers: {
                     Authorization: "Bearer " + context.state.token,
