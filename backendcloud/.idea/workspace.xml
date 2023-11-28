@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e18db4b0-6392-4f97-bfe2-716a5cc1c82c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/RegisterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/ranklist/RankIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/ranklist/RankIndexView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,23 +99,10 @@
       <recent name="com.kingofboss.matchingsystem.config" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.BotRunningSystemApplication">
-    <configuration name="BackendApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kingofboss.backend.BackendApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kingofboss.backend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
+    <configuration name="1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backendcloud" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kingofboss.backendcloud.BackendcloudApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,9 +114,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BackendcloudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="backendcloud" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kingofboss.backendcloud.BackendcloudApplication" />
+    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kingofboss.backend.BackendApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kingofboss.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,11 +153,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.1" />
+      <item itemvalue="Spring Boot.BackendApplication" />
+      <item itemvalue="Spring Boot.BotRunningSystemApplication" />
+      <item itemvalue="Spring Boot.MatchingSystemApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MatchingSystemApplication" />
-        <item itemvalue="Spring Boot.BackendApplication (1)" />
+        <item itemvalue="Spring Boot.BackendApplication" />
         <item itemvalue="Spring Boot.BotRunningSystemApplication" />
+        <item itemvalue="Spring Boot.MatchingSystemApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -192,12 +196,26 @@
       <workItem from="1701010794473" duration="3321000" />
       <workItem from="1701094449581" duration="4488000" />
       <workItem from="1701144706444" duration="517000" />
-      <workItem from="1701155797513" duration="659000" />
+      <workItem from="1701155797513" duration="4345000" />
+      <workItem from="1701166150737" duration="4154000" />
+      <workItem from="1701183100209" duration="176000" />
+      <workItem from="1701183384442" duration="5648000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

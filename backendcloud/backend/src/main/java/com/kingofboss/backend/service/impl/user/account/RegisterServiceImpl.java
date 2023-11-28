@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kingofboss.backend.mapper.UserMapper;
 import com.kingofboss.backend.pojo.User;
 import com.kingofboss.backend.service.user.account.RegisterService;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -72,7 +73,10 @@ public class RegisterServiceImpl implements RegisterService {
         }
 
         // 添加一个新用户
-        String encodedPassword = passwordEncoder.encode(password);
+//        String encodedPassword = passwordEncoder.encode(password);
+        // md5加密
+        String encodedPassword = DigestUtils.md5Hex(password);
+
         // 输入图片地址
         String photo = "https://cdn.acwing.com/media/user/profile/photo/239572_lg_a4f5e874d6.jpg";
         User user = new User(null, username, encodedPassword, photo, 1500);
