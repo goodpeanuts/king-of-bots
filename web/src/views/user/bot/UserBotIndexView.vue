@@ -151,7 +151,7 @@ export default {
 
         const refresh_bots = () => {
                 $.ajax({
-                    url: "http://192.168.13.143/api/user/bot/getlist/",
+                    url: "http://localhost:3000/api/user/bot/getlist/",
                     type: "get",
                     headers: {
                         Authorization: "Bearer " + store.state.user.token,
@@ -168,7 +168,7 @@ export default {
         const add_bot = () => {
             botadd.error_message = "",
             $.ajax({
-                    url: "http://192.168.13.143/api/user/bot/add/",
+                    url: "http://localhost:3000/api/user/bot/add/",
                     type: "post",
                     headers: {
                         Authorization: "Bearer " + store.state.user.token,
@@ -195,7 +195,7 @@ export default {
         const update_bot = (bot) => {
             bot.error_message = "",
             $.ajax({
-                    url: "http://192.168.13.143/api/user/bot/update/",
+                    url: "http://localhost:3000/api/user/bot/update/",
                     type: "post",
                     headers: {
                         Authorization: "Bearer " + store.state.user.token,
@@ -219,7 +219,7 @@ export default {
 
         const remove_bot = (bot) => {
             $.ajax({
-                    url: "http://192.168.13.143/api/user/bot/remove/",
+                    url: "http://localhost:3000/api/user/bot/remove/",
                     type: "post",
                     headers: {
                         Authorization: "Bearer " + store.state.user.token,
