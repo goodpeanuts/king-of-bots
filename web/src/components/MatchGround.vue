@@ -7,6 +7,7 @@
                 </div>
                 <div class="user-username">
                     {{ $store.state.user.username }}
+                    <!-- <div ref="myDiv"></div> -->
                 </div>
             </div>
             <div class="col-4">
@@ -25,6 +26,7 @@
                 </div>
                 <div class="user-username">
                     {{ $store.state.pk.opponent_username }}
+                    <!-- <div ref="myDiv"></div> -->
                 </div>
             </div>
             <div class="col-12" style="text-align: center; padding-top: 15vh;">
@@ -86,7 +88,12 @@ export default {
             select_bot,
 
         }
-    }    
+    },
+    // mounted() {
+    //     let script = document.createElement('script');
+    //     script.textContent = this.$store.state.user.username;
+    //     this.$refs.myDiv.appendChild(script);
+    // }    
 }
 
 </script>
