@@ -20,5 +20,4 @@ public class ReceiveBotMoveController {
         Integer direction = Integer.parseInt(Objects.requireNonNull(data.getFirst("direction")));
         return receiveBotService.receiveBotMove(userId, direction);
     }
-
 }

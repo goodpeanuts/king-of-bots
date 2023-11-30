@@ -5,7 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e18db4b0-6392-4f97-bfe2-716a5cc1c82c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/feedback/AddFeedbackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/feedback/FileTransmitController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/feedback/GetFeedbackListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/feedback/RemoveFeedbackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/feedback/UpdateFeedbackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/mapper/FeedbackMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/pojo/Feedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/AddFeedbackServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/GetFeedbackListServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/RemoveFeedbackServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/UpdateFeedbackServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/feedback/AddFeedbackService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/feedback/GetFeedbackListService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/feedback/RemoveFeedbackService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/feedback/UpdateFeedbackService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/views/user/feedback/UserFeedbackView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/pk/ReceiveBotMoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/pk/ReceiveBotMoveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/NavBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,37 +68,38 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;vulner&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/repo/KingOfBots/backendcloud&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/repo/KingOfBots/backendcloud/botrunningsystem/src/main/java/com/kingofboss/backend/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;234101d69178eef7406893e62df57ee9&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "vulner",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "corretto-1.8",
+    "last_opened_file_path": "D:/repo/KingOfBots/backendcloud",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "D:/repo/KingOfBots/backendcloud/botrunningsystem/src/main/java/com/kingofboss/backend/Main.java",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "234101d69178eef7406893e62df57ee9",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\repo\KingOfBots\backendcloud\botrunningsystem\src\main\resources" />
@@ -154,8 +174,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MatchingSystemApplication" />
         <item itemvalue="Spring Boot.BackendApplication" />
+        <item itemvalue="Spring Boot.MatchingSystemApplication" />
         <item itemvalue="Spring Boot.BotRunningSystemApplication" />
         <item itemvalue="Spring Boot.BackendApplication" />
       </list>
@@ -194,7 +214,8 @@
       <workItem from="1701166150737" duration="4154000" />
       <workItem from="1701183100209" duration="176000" />
       <workItem from="1701183384442" duration="5737000" />
-      <workItem from="1701270042514" duration="5877000" />
+      <workItem from="1701270042514" duration="6022000" />
+      <workItem from="1701313776289" duration="18966000" />
     </task>
     <servers />
   </component>

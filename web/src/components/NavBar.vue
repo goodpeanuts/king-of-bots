@@ -26,6 +26,9 @@
             <li>
               <router-link class="dropdown-item" :to="{name: 'user_bot_index'}" href="/user/bot/">我的bot</router-link>
             </li>
+            <li>
+              <router-link class="dropdown-item" :to="{name: 'user_feedback_index'}" href="/user/feedback/">反馈</router-link>
+            </li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#" @click="logout">退出</a></li>
           </ul>

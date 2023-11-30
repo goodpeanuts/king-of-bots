@@ -4,6 +4,7 @@ import RecordIndexView from '../views/record/RecordIndexView'
 import RecordContentView from '../views/record/RecordContentView'
 import RanklistIndexView from '../views/ranklist/RankIndexView'
 import UserBotIndexView from '../views/user/bot/UserBotIndexView'
+import UserFeedbackView from '../views/user/feedback/UserFeedbackView'
 import NotFound from '../views/error/NotFound'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegisterView from '../views/user/account/UserAccountRegisterView'
@@ -72,6 +73,14 @@ const routes = [
     path: "/user/bot/",
     name: "user_bot_index",
     component: UserBotIndexView,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/user/feedback/",
+    name: "user_feedback_index",
+    component: UserFeedbackView,
     meta: {
       requestAuth: true,
     }
