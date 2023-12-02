@@ -37,7 +37,7 @@
                                         <p>附件上传</p>
                                             <div>
                                             文件：
-                                            <input id="file-upload" type="file" name="file">
+                                            <input id="file-upload" type="file" name="file" accept="image/*,audio/*,video/*,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt">
                                             </div>
                                     </form>
                                 </div>
