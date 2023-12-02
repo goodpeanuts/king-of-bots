@@ -42,6 +42,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // 下方添加公开链接
                 .antMatchers("/api/user/account/token/", "/api/user/account/register/").permitAll()
                 .antMatchers("/pk/start/game/", "/pk/receive/bot/move/").hasIpAddress("127.0.0.1")
+//                .antMatchers("/api/user/server/refresh/").hasIpAddress("127.0.0.1")
+                .antMatchers("/api/user/server/refresh/").permitAll()
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated();
 

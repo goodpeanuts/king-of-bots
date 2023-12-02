@@ -5,6 +5,7 @@ import RecordContentView from '../views/record/RecordContentView'
 import RanklistIndexView from '../views/ranklist/RankIndexView'
 import UserBotIndexView from '../views/user/bot/UserBotIndexView'
 import UserFeedbackView from '../views/user/feedback/UserFeedbackView'
+import ServerStatusView from '../views/user/serverstatus/ServerStatusView'
 import NotFound from '../views/error/NotFound'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegisterView from '../views/user/account/UserAccountRegisterView'
@@ -81,6 +82,14 @@ const routes = [
     path: "/user/feedback/",
     name: "user_feedback_index",
     component: UserFeedbackView,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/user/server_status/",
+    name: "server_status_status",
+    component: ServerStatusView,
     meta: {
       requestAuth: true,
     }

@@ -20,6 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 // 下方添加公开链接
                 .antMatchers("/bot/add/").hasIpAddress("127.0.0.1")
+                .antMatchers("/bot/get-status").hasIpAddress("127.0.0.1")
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated();
     }

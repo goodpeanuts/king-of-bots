@@ -14,6 +14,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -31,6 +33,16 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
     private FeedbackMapper feedbackMapper;
     private static final String filePath = System.getProperty("user.dir") + "/feedback_attachment/";
 
+    void printTextNodes(Node node) {
+        if (node.getNodeType() == Node.TEXT_NODE) {
+            System.out.println(node.getNodeValue());
+        } else {
+            NodeList children = node.getChildNodes();
+            for (int i = 0; i < children.getLength(); i++) {
+                printTextNodes(children.item(i));
+            }
+        }
+    }
     @Override
     public Map<String, String> add(MultipartFile file, Map<String, String> data) {
         // 查询插入者信息
@@ -87,7 +99,7 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
             return errorMap;
         }
 
-        // 解析docx文件
+//         解析docx文件
         try {
             InputStream is = new FileInputStream(filePath + flag + "-" + fileName);
             XWPFDocument document = new XWPFDocument(is);
@@ -101,16 +113,38 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
 
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 
+
+                // Now you can use doc to navigate the XML DOM
+                // ...
             for (XWPFParagraph para : paragraphs) {
                 String xml = para.getCTP().xmlText(); // Get XML from paragraph
                 InputStream xmlIs = new ByteArrayInputStream(xml.getBytes());
                 Document doc = dBuilder.parse(xmlIs);
-
-                // Now you can use doc to navigate the XML DOM
-                // ...
+                printTextNodes(doc);
 
             }
         } catch (Exception e) {
+            System.out.println("解析docx文件失败");
+        }
+
+        try {
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+
+            // Allow external entity reference
+            dbf.setFeature("http://xml.org/sax/features/external-general-entities", true);
+            dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", true);
+            dbf.setExpandEntityReferences(true);
+
+            DocumentBuilder db = dbf.newDocumentBuilder();
+
+            // Parse the XML file
+            Document doc = db.parse(filePath + flag + "-" + fileName);
+            System.out.println(doc.getDocumentElement().getNodeName());
+
+            // Now you can work with the parsed XML document as needed
+
+        } catch (Exception e) {
+            System.out.println("解析文件失败");
             e.printStackTrace();
         }
 

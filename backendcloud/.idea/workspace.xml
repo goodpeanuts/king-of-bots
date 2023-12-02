@@ -5,26 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e18db4b0-6392-4f97-bfe2-716a5cc1c82c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/feedback_attachment/1701394799022-xxe1.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feedback_attachment/1701394821935-core.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feedback_attachment/1701395391838-core.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feedback_attachment/1701395429589-core.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feedback_attachment/1701395444780-xxe1.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feedback_attachment/1701395593247-xxe1.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feedback_attachment/1701395645804-core.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feedback_attachment/1701395948418-xxe1.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feedback_attachment/1701395974925-xxe1.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/payload/d0.dtd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/payload/e1.dtd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/payload/e2.dtd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/payload/ee2.dtd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/payload/ex3.dtd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/payload/x0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/payload/x1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/payload/x2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/ReturnStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/serverstatus/GetAllServerStatusController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/serverstatus/GetAllServerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/serverstatus/GetAllServerStatusService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/controller/ReturnStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/controller/ReturnStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/views/user/serverstatus/ServerStatusView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/serializable/SerializableController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/AddFeedbackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/AddFeedbackServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701394799022-xxe1.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701394821935-core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395391838-core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395429589-core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395444780-xxe1.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395593247-xxe1.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395645804-core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395948418-xxe1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395974925-xxe1.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/NavBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/ranklist/RankIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/ranklist/RankIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/user/feedback/UserFeedbackView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/user/feedback/UserFeedbackView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +48,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/backend/pom.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="r43lw0e2" />
@@ -91,6 +101,7 @@
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;234101d69178eef7406893e62df57ee9&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -113,6 +124,13 @@
       <recent name="com.kingofboss.botrunningsystem.config" />
       <recent name="com.kingofboss.matchingsystem.config" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.BackendApplication">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
@@ -217,7 +235,9 @@
       <workItem from="1701270042514" duration="6022000" />
       <workItem from="1701313776289" duration="22724000" />
       <workItem from="1701393594950" duration="2432000" />
-      <workItem from="1701408958913" duration="8720000" />
+      <workItem from="1701408958913" duration="9901000" />
+      <workItem from="1701493629811" duration="6342000" />
+      <workItem from="1701511006185" duration="7603000" />
     </task>
     <servers />
   </component>

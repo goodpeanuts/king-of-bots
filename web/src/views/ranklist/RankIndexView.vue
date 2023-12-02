@@ -12,7 +12,11 @@
                     <td>
                         <img :src="user.photo" alt="" class="record-user-photo">
                         &nbsp;
-                        <span class="record-user-username">{{ user.username }}</span>
+                        <span class="record-user-username">
+                            {{ user.username }}
+                            <!-- <div ref="myDiv"></div> -->
+                            <!-- <div :ref="`myDiv_${user.id}`"></div> -->
+                        </span>
                     </td>
                     <td>{{ user.rating }}</td>
                 </tr>
@@ -37,6 +41,7 @@
 <script>
 import ContentField from '../../components/ContentField.vue'
 import { useStore } from 'vuex';
+// import { ref, onMounted } from 'vue';
 import { ref } from 'vue';
 import $ from 'jquery';
 
@@ -99,13 +104,29 @@ export default {
         }
 
         pull_page(current_page);
+        // onMounted(() => {
+        // users.value.forEach(user => {
+        //         let script = document.createElement('script');
+        //         script.textContent = `console.log("${user.username}");`;
+        //         this.$refs.myDiv.appendChild(script);
+        //     });
+        // });
+    //     onMounted(() => {
+    //   users.value.forEach((user) => {
+    //     const script = document.createElement('script');
+    //     script.textContent = `console.log("${user.username}");`;
+    //     const divRef = `myDiv_${user.id}`;
+    //     const targetDiv = document.querySelector(`[ref=${divRef}]`);
+    //     targetDiv.appendChild(script);
+    //   });
+    // });
 
         return {
             users,
             pages,
             click_page
         }
-    }
+    },
 }
 </script>
 

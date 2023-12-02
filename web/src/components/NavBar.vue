@@ -29,6 +29,9 @@
             <li>
               <router-link class="dropdown-item" :to="{name: 'user_feedback_index'}" href="/user/feedback/">反馈</router-link>
             </li>
+            <li>
+              <router-link class="dropdown-item" :to="{name: 'server_status_status'}" href="/user/feedback/">服务器状态</router-link>
+            </li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#" @click="logout">退出</a></li>
           </ul>
