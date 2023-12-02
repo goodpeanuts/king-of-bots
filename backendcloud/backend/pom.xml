@@ -7,7 +7,7 @@
 		<groupId>com.kingofboss</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<version>0.0.1x-SNAPSHOT</version>
+	<version>0.0.1-xee-SNAPSHOT</version>
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.kingofboss</groupId>
@@ -111,6 +111,11 @@
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
 			<version>1.16.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.0.0</version>
 		</dependency>
 
 	</dependencies>
