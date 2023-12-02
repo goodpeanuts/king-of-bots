@@ -35,13 +35,38 @@
                 </div>  
             </div>
         </div>
+        <div class="col-9">
+                <div class="card" style="margin-top: 25px;">
+                    <div class="card-header" >
+                        <span style="font-size: 130%;">服务器    </span>
+                        <input type="text" v-model="cmd.content" placeholder="请输入ip">
+                        <button type="button" class="btn btn-success float-end" @click="return_cmd">
+                            检查
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>执行结果</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{ result }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+            </div>
     </div>
     
     
     </template>
     
     <script>
-    import { ref } from 'vue'
+    import { ref, reactive } from 'vue'
     import $ from 'jquery'
     import { useStore } from 'vuex'
     
@@ -49,6 +74,11 @@
     
         setup() {
             const store = useStore();
+            const result = ref("");
+
+            const cmd = reactive({
+                content: ""
+            });
 
             let server_list = ref([
                 { id: 1, name: "游戏服务", status: "" },
@@ -78,9 +108,28 @@
                 }
             refresh_status();
 
+            const return_cmd = () => {
+                    $.ajax({
+                        url: "http://localhost:3000/api/user/server/cmd/",
+                        type: "post",
+                        data: {
+                            content: cmd.content
+                        },
+                        success(resp) {
+                            result.value = resp;
+                        },
+                        error(resp) {
+                            result.value = resp;
+                        }
+                    })
+                }
+
             return {    
                 refresh_status,
-                server_list
+                return_cmd,
+                server_list,
+                result,
+                cmd
             }
         }
     }

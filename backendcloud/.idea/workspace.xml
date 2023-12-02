@@ -5,33 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e18db4b0-6392-4f97-bfe2-716a5cc1c82c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/ReturnStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/serverstatus/GetAllServerStatusController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/serverstatus/GetAllServerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/user/serverstatus/GetAllServerStatusService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/controller/ReturnStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/controller/ReturnStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/views/user/serverstatus/ServerStatusView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/serverstatus/GetCmdController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/controller/serializable/SerializableController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/AddFeedbackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/AddFeedbackServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/botrunningsystem/src/main/java/com/kingofboss/botrunningsystem/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701394799022-xxe1.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701394821935-core.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395391838-core.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395429589-core.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395444780-xxe1.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395593247-xxe1.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395645804-core.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395948418-xxe1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback_attachment/1701395974925-xxe1.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/matchingsystem/src/main/java/com/kingofboss/matchingsystem/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/NavBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/MatchGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/MatchGround.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/store/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/pk/PKIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/pk/PKIndexView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/ranklist/RankIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/ranklist/RankIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/record/RecordIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/record/RecordIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/user/account/UserAccountRegisterView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/user/account/UserAccountRegisterView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/user/bot/UserBotIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/user/bot/UserBotIndexView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/user/feedback/UserFeedbackView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/user/feedback/UserFeedbackView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/user/serverstatus/ServerStatusView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/user/serverstatus/ServerStatusView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +223,7 @@
       <workItem from="1701393594950" duration="2432000" />
       <workItem from="1701408958913" duration="9901000" />
       <workItem from="1701493629811" duration="6342000" />
-      <workItem from="1701511006185" duration="7603000" />
+      <workItem from="1701511006185" duration="13701000" />
     </task>
     <servers />
   </component>
