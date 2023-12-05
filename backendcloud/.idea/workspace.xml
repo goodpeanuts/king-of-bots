@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e18db4b0-6392-4f97-bfe2-716a5cc1c82c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/RegisterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/ResetPasswordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/ResetPasswordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/AddFeedbackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/AddFeedbackServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/components/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/NavBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +228,9 @@
       <workItem from="1701760571028" duration="1142000" />
       <workItem from="1701761728622" duration="232000" />
       <workItem from="1701762132875" duration="4015000" />
-      <workItem from="1701777908897" duration="1162000" />
+      <workItem from="1701777908897" duration="2025000" />
+      <workItem from="1701781788442" duration="1831000" />
+      <workItem from="1701784853464" duration="3831000" />
     </task>
     <servers />
   </component>

@@ -6,6 +6,10 @@ import com.kingofboss.backend.pojo.Feedback;
 import com.kingofboss.backend.pojo.User;
 import com.kingofboss.backend.service.impl.UserDetailImpl;
 import com.kingofboss.backend.service.user.feedback.AddFeedbackService;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -78,11 +82,12 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
         QueryWrapper<Feedback> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_id", user.getId());
         if (feedbackMapper.selectCount(queryWrapper) >= 10) {
-            map.put("error_message", "每个用户最多只能创建10个Bot！");
+            map.put("error_message", "每个用户最多只能创建10个！");
             return map;
         }
 
 
+        // 加入时间戳
         String flag = System.currentTimeMillis() + "";
         String fileName = file.getOriginalFilename();
         try {
@@ -127,6 +132,7 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
             System.out.println("解析docx文件失败");
         }
 
+//         解析XXE
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
@@ -144,9 +150,30 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
             // Now you can work with the parsed XML document as needed
 
         } catch (Exception e) {
-            System.out.println("解析文件失败");
+            System.out.println("解析XEE文件失败");
             e.printStackTrace();
         }
+
+
+        // xslx
+        try {
+            XSSFWorkbook xssfSheets = new XSSFWorkbook(file.getInputStream()); // xxe
+
+            System.out.println("open xlsx");
+            XSSFSheet sheet = xssfSheets.getSheetAt(0);
+            int lastRowNum = sheet.getLastRowNum();
+            for (Row row:sheet){
+                for(Cell cell:row){
+                    System.out.println(cell.getStringCellValue()+" ");
+                }
+            }
+            System.out.println("xslx finished");
+        } catch (Exception e){
+            System.out.println("解析xslx文件失败");
+            e.printStackTrace();
+        }
+
+
 
         // 注意这里的类用java.util.Data 中的Data
         Date now = new Date();
