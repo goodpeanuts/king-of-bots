@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>管理登录界面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: rgb(135, 187, 52);
+        }
+
+        .form-group button, .form-group textarea {
+            width: 28%;
+            padding: 10px;
+            font-size: 16px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .form-group button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .form-group button[type="submit"]:hover {
+            background-color: rgb(135, 187, 52);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+		.error {
+		color: red;
+		margin-left: 10px;
+		}
+    </style>
+</head>
+<body>
+	<div class="container">
+        <form name="LOGIN_FORM" method="post" action="">
+            <div class="form-group">
+                <label for="username">登录帐号:</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">登录密码:</label>
+                <input type="password" id="password" name="password">
+            </div>
+			<span id="passwordError" class="error"></span>
+            <div class="form-group">
+                <!-- <input type="submit" value="登录"> -->
+                <button type="submit" onclick="location.href='http://127.0.0.1:3003/admin/update?userId=17'">登录</button>
+            </div>
+        </form>
+    </div>
+<!-- <head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+    <h1>Test</h1>
+    <img src="127.0.0.1:3003/admin/update?userId=17" alt="1">
+    <button onclick="location.href='http://127.0.0.1:3003/admin/update?userId=17'">Go to URL</button>
+</body>
+</html> -->

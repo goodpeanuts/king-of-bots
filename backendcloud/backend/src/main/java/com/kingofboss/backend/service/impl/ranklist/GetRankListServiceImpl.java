@@ -30,5 +30,4 @@ public class GetRankListServiceImpl implements GetRankListService {
         resp.put("users_count", userMapper.selectCount(null));
         return resp;
     }
-
 }
