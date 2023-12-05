@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e18db4b0-6392-4f97-bfe2-716a5cc1c82c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../web/src/views/user/feedback/UserFeedbackView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/user/feedback/UserFeedbackView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/RegisterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/ResetPasswordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/account/ResetPasswordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/NavBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +79,7 @@
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;234101d69178eef7406893e62df57ee9&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -211,7 +215,20 @@
       <workItem from="1701393594950" duration="2432000" />
       <workItem from="1701408958913" duration="9901000" />
       <workItem from="1701493629811" duration="6342000" />
-      <workItem from="1701511006185" duration="14323000" />
+      <workItem from="1701511006185" duration="15017000" />
+      <workItem from="1701535807532" duration="14000" />
+      <workItem from="1701567531792" duration="707000" />
+      <workItem from="1701582509787" duration="2038000" />
+      <workItem from="1701615665071" duration="607000" />
+      <workItem from="1701668535311" duration="179000" />
+      <workItem from="1701668741017" duration="88000" />
+      <workItem from="1701684950034" duration="2792000" />
+      <workItem from="1701689292427" duration="256000" />
+      <workItem from="1701759695446" duration="865000" />
+      <workItem from="1701760571028" duration="1142000" />
+      <workItem from="1701761728622" duration="232000" />
+      <workItem from="1701762132875" duration="4015000" />
+      <workItem from="1701777908897" duration="1162000" />
     </task>
     <servers />
   </component>

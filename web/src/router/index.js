@@ -9,6 +9,7 @@ import ServerStatusView from '../views/user/serverstatus/ServerStatusView'
 import NotFound from '../views/error/NotFound'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegisterView from '../views/user/account/UserAccountRegisterView'
+import UserAccountResetView from '../views/user/account/UserAccountResetView'
 import store from '@/store/index'
 
 // 把一些额外信息放到一个额外的域里面，meta信息里面存一下是否要授权，如果需要授权而且没有登录，重定向到登录页面，重定向到登录界面。
@@ -50,6 +51,14 @@ const routes = [
     path: "/user/account/register/",
     name: "user_account_register",
     component: UserAccountRegisterView,
+    meta: {
+      requestAuth: false,
+    }
+  },
+  {
+    path: "/user/account/reset/",
+    name: "user_account_reset",
+    component: UserAccountResetView,
     meta: {
       requestAuth: false,
     }

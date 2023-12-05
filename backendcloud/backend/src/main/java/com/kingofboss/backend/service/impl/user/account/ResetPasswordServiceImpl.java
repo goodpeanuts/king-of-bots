@@ -77,6 +77,8 @@ public class ResetPasswordServiceImpl implements ResetPasswordService {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
 
+            System.out.println(sql);
+
             if (!resultSet.next()) {
                 map.put("error_message", "用户名或密码错误");
                 return map;
