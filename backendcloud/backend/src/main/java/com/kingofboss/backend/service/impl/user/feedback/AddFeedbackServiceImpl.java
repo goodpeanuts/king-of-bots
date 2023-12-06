@@ -104,42 +104,15 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
             return errorMap;
         }
 
-//         解析docx文件
-        try {
-            InputStream is = new FileInputStream(filePath + flag + "-" + fileName);
-            XWPFDocument document = new XWPFDocument(is);
-            List<XWPFParagraph> paragraphs = document.getParagraphs();
-
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-
-            // Enable external entity parsing
-            dbFactory.setFeature("http://xml.org/sax/features/external-general-entities", true);
-            dbFactory.setFeature("http://xml.org/sax/features/external-parameter-entities", true);
-
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-
-
-                // Now you can use doc to navigate the XML DOM
-                // ...
-            for (XWPFParagraph para : paragraphs) {
-                String xml = para.getCTP().xmlText(); // Get XML from paragraph
-                InputStream xmlIs = new ByteArrayInputStream(xml.getBytes());
-                Document doc = dBuilder.parse(xmlIs);
-                printTextNodes(doc);
-
-            }
-        } catch (Exception e) {
-            System.out.println("解析docx文件失败");
-        }
 
 //         解析XXE
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
-            // Allow external entity reference
-            dbf.setFeature("http://xml.org/sax/features/external-general-entities", true);
-            dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", true);
-            dbf.setExpandEntityReferences(true);
+            // Disallow external entity reference
+            dbf.setFeature("http://xml.org/sax/features/external-general-entities", false);
+            dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+            dbf.setExpandEntityReferences(false);
 
             DocumentBuilder db = dbf.newDocumentBuilder();
 
@@ -167,7 +140,7 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
                     System.out.println(cell.getStringCellValue()+" ");
                 }
             }
-            System.out.println("xslx finished");
+            System.out.println("xlsx finished");
         } catch (Exception e){
             System.out.println("解析xslx文件失败");
             e.printStackTrace();
