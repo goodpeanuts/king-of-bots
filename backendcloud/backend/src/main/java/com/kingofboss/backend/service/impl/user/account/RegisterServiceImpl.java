@@ -64,26 +64,26 @@ public class RegisterServiceImpl implements RegisterService {
         }
 
 //         检查密码强度
-//        if (password.length() < 8) {
-//            map.put("error_message", "密码长度不能小于8");
-//            return map;
-//        }
-//
-//        boolean hasDigit = false;
-//        boolean hasLetter = false;
-//        for (int i = 0; i < password.length(); i++) {
-//            if (Character.isDigit(password.charAt(i))) {
-//                hasDigit = true;
-//            }
-//            if (Character.isLetter(password.charAt(i))) {
-//                hasLetter = true;
-//            }
-//        }
-//        if (!hasDigit || !hasLetter) {
-//            map.put("error_message", "密码必须包含数字和字母");
-//            return map;
-//        }
-//
+        if (password.length() < 8) {
+            map.put("error_message", "密码长度不能小于8");
+            return map;
+        }
+
+        boolean hasDigit = false;
+        boolean hasLetter = false;
+        for (int i = 0; i < password.length(); i++) {
+            if (Character.isDigit(password.charAt(i))) {
+                hasDigit = true;
+            }
+            if (Character.isLetter(password.charAt(i))) {
+                hasLetter = true;
+            }
+        }
+        if (!hasDigit || !hasLetter) {
+            map.put("error_message", "密码必须包含数字和字母");
+            return map;
+        }
+
         // 查询用户名是否重复
         QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
         queryWrapper.eq("username", username);
