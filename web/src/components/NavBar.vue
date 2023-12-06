@@ -51,11 +51,6 @@
             注册
           </router-link>
         </li>
-        <li class="nav-item">
-          <router-link class="nav-link" :to="{name: 'user_account_reset'}" role="button">
-            重置密码
-          </router-link>
-        </li>
       </ul>
     </div>
   </div>

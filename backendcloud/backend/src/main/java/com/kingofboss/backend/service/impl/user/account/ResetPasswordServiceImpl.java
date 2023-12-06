@@ -1,10 +1,14 @@
 package com.kingofboss.backend.service.impl.user.account;
 
 import com.kingofboss.backend.mapper.UserMapper;
+import com.kingofboss.backend.pojo.User;
+import com.kingofboss.backend.service.impl.UserDetailImpl;
 import com.kingofboss.backend.service.user.account.ResetPasswordService;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -24,34 +28,22 @@ public class ResetPasswordServiceImpl implements ResetPasswordService {
     private AuthenticationManager authenticationManager;
 
     @Override
-    public Map<String, String> reset(String username, String oldPassword, String password, String confirmPassword) {
+    public Map<String, String> reset(String password, String confirmPassword) {
+
+        UsernamePasswordAuthenticationToken authenticationToken = (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+
+        UserDetailImpl loginUser = (UserDetailImpl) authenticationToken.getPrincipal();
+        User user = loginUser.getUser();
+
         Map<String, String> map = new HashMap<>();
-        if (username == null) {
-            map.put("error_message", "用户名不能为空");
-            return map;
-        }
 
         if (password == null || confirmPassword == null) {
             map.put("error_message", "密码不能为空");
             return map;
         }
 
-        // 删除末尾空格
-        username = username.trim();
-        //password = password.trim();
-
-        if(username.length() == 0) {
-            map.put("error_message", "用户名不能为空");
-            return map;
-        }
-
         if (password.length() == 0 || confirmPassword.length() == 0) {
             map.put("error_message", "密码不能为空");
-            return map;
-        }
-
-        if (username.length() > 100) {
-            map.put("error_message", "用户名长度不能超过100");
             return map;
         }
 
@@ -65,50 +57,37 @@ public class ResetPasswordServiceImpl implements ResetPasswordService {
             return map;
         }
 
-        String url = "jdbc:mysql://localhost:3306/kob?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8";
-        String databaseUsername = "root";
-        String databasePassword = "123456";
-        oldPassword = DigestUtils.md5Hex(oldPassword);
-        String sql = "SELECT * FROM user WHERE username = '" + username + "'" + " AND password = '" + oldPassword + "'";  // Replace with actual username and password
-        try {
-            Connection connection = DriverManager.getConnection(url, databaseUsername, databasePassword);
-            System.out.println("Connected to the database");
+        //         检查密码强度
+//        if (password.length() < 8) {
+//            map.put("error_message", "密码长度不能小于8");
+//            return map;
+//        }
+//
+//        boolean hasDigit = false;
+//        boolean hasLetter = false;
+//        for (int i = 0; i < password.length(); i++) {
+//            if (Character.isDigit(password.charAt(i))) {
+//                hasDigit = true;
+//            }
+//            if (Character.isLetter(password.charAt(i))) {
+//                hasLetter = true;
+//            }
+//        }
+//        if (!hasDigit || !hasLetter) {
+//            map.put("error_message", "密码必须包含数字和字母");
+//            return map;
+//        }
+//
 
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sql);
+        String encodedPassword = passwordEncoder.encode(password);
 
-            System.out.println(sql);
+        user.setPassword(encodedPassword);
+        userMapper.updateById(user);
 
-            if (!resultSet.next()) {
-                map.put("error_message", "用户名或密码错误");
-                return map;
-            }
-
-            System.out.println("User ID: " + resultSet.getInt("id"));
-            System.out.println("Username: " + resultSet.getString("username"));
-            Integer id = resultSet.getInt("id");
-            System.out.println(resultSet.getInt("id"));
-
-            // Update password
-            password = DigestUtils.md5Hex(password);
-            String updateSql = "UPDATE user SET password = '" + password + "' WHERE id = " + id;
-            statement.executeUpdate(updateSql);
-            System.out.println("Password updated successfully");
-
-            // Close the connection
-
-            connection.close();
-        } catch (SQLException e) {
-            System.out.println("Cannot connect to the database");
-            e.printStackTrace();
-        }
-
-//        String jwt = JwtUtil.createJWT(user.getId().toString());
         System.out.println("reset!");
         map.put("error_message" ,"success");
 
         return map;
 
     }
-
 }

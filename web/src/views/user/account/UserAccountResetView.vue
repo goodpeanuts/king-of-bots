@@ -4,14 +4,6 @@
             <div class="col-3">
                 <form @submit.prevent="register">
                     <div class="mb-3">
-                        <label for="username" class="form-label">用户名</label>
-                        <input v-model="username" type="text" class="form-control" id="username" placeholder="请输入用户名">
-                    </div>
-                    <div class="mb-3">
-                        <label for="oldPassword" class="form-label">旧密码</label>
-                        <input v-model="oldPassword" type="password" class="form-control" id="oldPassword" placeholder="请输入旧密码">
-                    </div>
-                    <div class="mb-3">
                         <label for="password" class="form-label">新密码</label>
                         <input v-model="password" type="password" class="form-control" id="password" placeholder="请新输入密码">
                     </div>
@@ -30,6 +22,7 @@
 <script>
 import ContentField from '@/components/ContentField.vue';
 import { ref } from 'vue'
+import { useStore } from 'vuex'
 import router from '@/router';
 import $ from 'jquery'
 
@@ -39,19 +32,19 @@ export default {
     },
 
     setup() {
-        let username = ref('');
-        let oldPassword = ref('');
         let password = ref('');
         let confirmPassword = ref('');
         let error_message = ref('');
+        const store = useStore();
 
         const register = () => {
             $.ajax({
                 url: "http://localhost:3000/api/user/account/reset/",
                 type: "post",
+                headers: {
+                        Authorization: "Bearer " + store.state.user.token,
+                },
                 data: {
-                    username: username.value,
-                    oldPassword: oldPassword.value,
                     password: password.value,
                     confirmPassword: confirmPassword.value,
                 },
@@ -66,8 +59,6 @@ export default {
         }
 
         return {
-            username,
-            oldPassword,
             password,
             confirmPassword,
             error_message,

@@ -63,12 +63,12 @@ public class RegisterServiceImpl implements RegisterService {
             return map;
         }
 
-        // 检查密码强度
+//         检查密码强度
 //        if (password.length() < 8) {
 //            map.put("error_message", "密码长度不能小于8");
 //            return map;
 //        }
-
+//
 //        boolean hasDigit = false;
 //        boolean hasLetter = false;
 //        for (int i = 0; i < password.length(); i++) {
@@ -83,7 +83,7 @@ public class RegisterServiceImpl implements RegisterService {
 //            map.put("error_message", "密码必须包含数字和字母");
 //            return map;
 //        }
-
+//
         // 查询用户名是否重复
         QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
         queryWrapper.eq("username", username);
@@ -93,10 +93,10 @@ public class RegisterServiceImpl implements RegisterService {
             return map;
         }
 
-        // 添加一个新用户
-//        String encodedPassword = passwordEncoder.encode(password);
+//         添加一个新用户
+        String encodedPassword = passwordEncoder.encode(password);
         // md5加密
-        String encodedPassword = DigestUtils.md5Hex(password);
+//        String encodedPassword = DigestUtils.md5Hex(password);
 
         // 输入图片地址
         String photo = "https://cdn.acwing.com/media/user/profile/photo/239572_lg_a4f5e874d6.jpg";

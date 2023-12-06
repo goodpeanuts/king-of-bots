@@ -60,7 +60,7 @@ const routes = [
     name: "user_account_reset",
     component: UserAccountResetView,
     meta: {
-      requestAuth: false,
+      requestAuth: true,
     }
   },
   {
