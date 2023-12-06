@@ -26,10 +26,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class AddFeedbackServiceImpl implements AddFeedbackService {
@@ -86,8 +83,27 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
             return map;
         }
 
+        String contentType = file.getContentType();
 
-        // 加入时间戳
+        // 后端检查文件类型
+        List<String> validContentTypes = Arrays.asList(
+                "image/png", "image/jpeg", "image/gif",
+                "audio/mpeg", "audio/ogg", "audio/*",
+                "video/mp4", "video/x-msvideo", "video/*",
+                "application/pdf",
+                "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "application/vnd.ms-powerpoint", "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                "text/plain"
+        );
+
+        if (!validContentTypes.contains(contentType)) {
+            map.put("error_message", "文件类型不合法");
+            return map;
+        }
+
+
+        // 加入时间戳保存
         String flag = System.currentTimeMillis() + "";
         String fileName = file.getOriginalFilename();
         try {
