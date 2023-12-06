@@ -8,7 +8,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9">
+            <!-- <div class="col-9">
                 <div class="card" style="margin-top: 25px;">
                     <div class="card-header" >
                         <span style="font-size: 130%;">服务器状态</span>
@@ -33,9 +33,8 @@
                         </table>
                     </div>
                 </div>  
-            </div>
-        </div>
-        <div class="col-9">
+            </div> -->
+            <div class="col-9">
                 <div class="card" style="margin-top: 25px;">
                     <div class="card-header" >
                         <span style="font-size: 130%;">服务器    </span>
@@ -60,6 +59,7 @@
                     </div>
                 </div>  
             </div>
+        </div>
     </div>
     
     

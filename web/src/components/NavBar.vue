@@ -32,6 +32,9 @@
             <li>
               <router-link class="dropdown-item" :to="{name: 'server_status_status'}" href="/user/feedback/">服务器状态</router-link>
             </li>
+            <li>
+              <router-link class="dropdown-item" :to="{name: 'user_account_reset'}" href="/user/account/reset/">重置密码</router-link>
+            </li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#" @click="logout">退出</a></li>
           </ul>

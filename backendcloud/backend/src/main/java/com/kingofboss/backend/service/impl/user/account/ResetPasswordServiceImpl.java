@@ -95,7 +95,6 @@ public class ResetPasswordServiceImpl implements ResetPasswordService {
             statement.executeUpdate(updateSql);
             System.out.println("Password updated successfully");
 
-
             // Close the connection
 
             connection.close();
