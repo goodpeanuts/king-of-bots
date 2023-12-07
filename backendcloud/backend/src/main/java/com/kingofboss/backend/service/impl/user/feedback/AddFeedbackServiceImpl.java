@@ -97,10 +97,25 @@ public class AddFeedbackServiceImpl implements AddFeedbackService {
                 "text/plain"
         );
 
+
+        // 允许的文件后缀名
+        List<String> validFileExtensions = Arrays.asList(
+                "png", "jpg", "jpeg", "gif",
+                "mp3", "ogg", "wav", "mp4", "avi", "pdf",
+                "doc", "docx", "xls", "xlsx", "ppt", "pptx", "txt"
+        );
+
         if (!validContentTypes.contains(contentType)) {
             map.put("error_message", "文件类型不合法");
             return map;
         }
+
+        String fileExtension = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf(".") + 1);
+        if (!validFileExtensions.contains(fileExtension)) {
+            map.put("error_message", "文件类型不合法");
+            return map;
+        }
+
 
 
         // 加入时间戳保存

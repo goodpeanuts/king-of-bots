@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e18db4b0-6392-4f97-bfe2-716a5cc1c82c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/AddFeedbackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/kingofboss/backend/service/impl/user/feedback/AddFeedbackServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/MatchGround.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/MatchGround.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/store/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/pk/PKIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/pk/PKIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/ranklist/RankIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/ranklist/RankIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/record/RecordIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/record/RecordIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/user/account/UserAccountRegisterView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/user/account/UserAccountRegisterView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/user/account/UserAccountResetView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/user/account/UserAccountResetView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/user/bot/UserBotIndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/user/bot/UserBotIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/user/feedback/UserFeedbackView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/user/feedback/UserFeedbackView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/user/serverstatus/ServerStatusView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/user/serverstatus/ServerStatusView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +247,9 @@
       <workItem from="1701867017075" duration="74000" />
       <workItem from="1701867462304" duration="476000" />
       <workItem from="1701868088739" duration="363000" />
-      <workItem from="1701868467879" duration="4041000" />
+      <workItem from="1701868467879" duration="4945000" />
+      <workItem from="1701918199113" duration="721000" />
+      <workItem from="1701918930311" duration="709000" />
     </task>
     <servers />
   </component>
